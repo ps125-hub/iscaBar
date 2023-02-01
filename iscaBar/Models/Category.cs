@@ -18,21 +18,23 @@ namespace iscaBar.Models
         private string description;
         public string Description { get { return description; } set { description = value; OnPropertyChanged(); } }
         private List<Category> subcategories;
+        
         [OneToMany]
         public List<Category> Subcategories { get { return subcategories; } set { subcategories = value; OnPropertyChanged(); } }
         private Category catFather;
         private int catFatherId;
         [ForeignKey(typeof(int))]
         public int CatFatherId { get { return catFatherId; } set { catFatherId = value; OnPropertyChanged(); } }
+        
         [ManyToOne]
         public Category CatFather { get { return catFather; } set { catFather = value; OnPropertyChanged(); } }
 
-        private List<int> products;
+        private List<Product> products;
         [ManyToMany(typeof(CategoryProduct))]
-        public List<int> Products { get { return products; } set { products = value; OnPropertyChanged(); } }
+        public List<Product> Products { get { return products; } set { products = value; OnPropertyChanged(); } }
         public Category()
         {
-            products = new List<int>();
+            products = new List<Product>();
             Subcategories = new List<Category>();
         }
     }

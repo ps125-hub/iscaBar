@@ -23,9 +23,9 @@ namespace iscaBar.ViewModels
                 OnPropertyChanged();
             }
         }
-        public ListProductsVM( Category fatherCategory)
+        public ListProductsVM( /*Category fatherCategory*/)
         {
-            category = fatherCategory;
+            //category = fatherCategory;
             cargarDatos();
         }
         private async Task cargarDatos()
@@ -33,8 +33,8 @@ namespace iscaBar.ViewModels
             ListaProductos = new ObservableCollection<Product>();
 
             List<Product> lproductos = await ProductSDAO.GetAllAsync();
-            
-                foreach(int id in category.Products) {
+            ListaProductos = new ObservableCollection<Product>(lproductos);
+                /*foreach(int id in category.Products) {
                 foreach (Product product in lproductos)
                 { 
                     if(id == product.Id)
@@ -43,9 +43,9 @@ namespace iscaBar.ViewModels
                         break;
                     }
                 }
-            }
-           
-            
+            }*/
+
+
 
         }
 

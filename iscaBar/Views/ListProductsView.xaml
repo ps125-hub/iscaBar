@@ -9,9 +9,10 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                        <StackLayout Spacing="5" Padding="10">
-                        <Label Text="{Binding Name}" FontSize="Small"/>
-                        <Label Text="{Binding Description}" FontSize="Small"/>
+                    
+                    <StackLayout Spacing="5" Padding="10" >
+                        <Label Text="{Binding Name}" FontSize="Small"  FontAttributes="Bold" TextColor="Gray"/>
+                        <Label Text="{Binding Description}" TextColor="Red"/>
                         </StackLayout>
                 </ViewCell>
             </DataTemplate>

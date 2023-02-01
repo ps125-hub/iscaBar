@@ -20,7 +20,7 @@ namespace iscaBar.Views
         private ListProductsVM listProductsVM;
         public ListProductsVM ListProductsVM { get { return listProductsVM; } set { listProductsVM = value; OnPropertyChanged(); } }
 
-        public ListProductsView(Category fatherCategory )
+        public ListProductsView(/*Category fatherCategory*/ )
         {
            /* Items = new ObservableCollection<Item>();
             Item i1 = new Item();
@@ -39,7 +39,7 @@ namespace iscaBar.Views
             Items.Add(i2);
             Items.Add(i3);*/
             InitializeComponent();
-            listProductsVM = new ListProductsVM(fatherCategory);
+            listProductsVM = new ListProductsVM(/*fatherCategory*/);
             this.BindingContext = listProductsVM;
 
         }

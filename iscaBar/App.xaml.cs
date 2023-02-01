@@ -1,5 +1,6 @@
 ﻿using iscaBar.DAO.Servidor;
 using iscaBar.Services;
+using iscaBar.ViewModels;
 using iscaBar.Views;
 using System;
 using Xamarin.Forms;
@@ -14,7 +15,7 @@ namespace iscaBar
         {
             InitializeComponent();
             DependencyService.Register<MockDataStore>();
-            MainPage = new ListProductsView();
+            MainPage = new NavigationPage(new ListIngredient());
         }
 
         protected override void OnStart()
