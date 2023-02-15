@@ -28,19 +28,19 @@
     <Compile Update="Views\ListProductsView.xaml.cs">
       <DependentUpon>ListProductsView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\DetailOrderView.xaml.cs">
-      <DependentUpon>DetailOrderView.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\DetailOrderView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\ListIngredient.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ListProductsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\DetailOrderView.xaml">
+    <EmbeddedResource Update="Views\ListViewPage1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

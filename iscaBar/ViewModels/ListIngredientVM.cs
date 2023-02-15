@@ -33,5 +33,6 @@ namespace iscaBar.ViewModels
             List<Ingredient> lingredients = await IngredientSDAO.GetAllAsync();
             Ingredients = new ObservableCollection<Ingredient>(lingredients);
         }
+
     }
 }

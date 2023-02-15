@@ -15,24 +15,25 @@ namespace iscaBar.Models
         private string description;
         private decimal price;
         private List<Ingredient> ingredients;
-        private List<Category> categories;
-        private List<Order> orders;
+        private List<int> orders;
 
         [PrimaryKey, AutoIncrement]
         public int Id { get { return id; } set { id = value; OnPropertyChanged(); } }
         public string Name { get { return name; } set { name = value; OnPropertyChanged(); } }
         public string Description { get { return description; } set { description = value; OnPropertyChanged(); } }
-
         public decimal Price { get { return price; } set { price = value; OnPropertyChanged(); } }
-
         [ManyToMany(typeof(ProdIngre))]
         public List<Ingredient> Ingredients { get { return ingredients; } set { ingredients = value; OnPropertyChanged(); } }
 
+        private List<Category> categories;
         [ManyToMany(typeof(CategoryProduct))]
         public List<Category> Categories { get { return categories; } set { categories = value; OnPropertyChanged(); } }
         [OneToMany]
-        public List<Order> Orders { get { return orders; } set { orders = value; OnPropertyChanged(); } }
+        public List<int> Orders { get { return orders; } set { orders = value; OnPropertyChanged(); } }
 
-
+        public Product()
+        {
+            Categories = new List<Category>();
+        }
     }
 }

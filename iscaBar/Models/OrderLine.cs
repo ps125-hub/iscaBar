@@ -8,20 +8,20 @@ using System.Text;
 namespace iscaBar.Models
 {
     [Table("order")]
-    public class OrderLine:ModelBase
+    public class OrderLine : ModelBase
     {
         private int id;
         private Product product;
         private int quantity;
         private decimal price;
-        private String observations;
+        private string observations;
 
-        [PrimaryKey,AutoIncrement]
+        [PrimaryKey, AutoIncrement]
         public int Id { get { return id; } set { id = value; OnPropertyChanged(); } }
         [ManyToOne]
         public Product Product { get { return product; } set { product = value; OnPropertyChanged(); } }
         public int Quantity { get { return quantity; } set { quantity = value; OnPropertyChanged(); } }
         public decimal Price { get { return price; } set { price = value; OnPropertyChanged(); } }
-        public String Observations { get { return observations; } set { observations = value;OnPropertyChanged(); } }
+        public string Observations { get { return observations; } set { observations = value; OnPropertyChanged(); } }
     }
 }

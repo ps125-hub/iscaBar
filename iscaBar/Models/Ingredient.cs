@@ -12,15 +12,15 @@ namespace iscaBar.Models
     {
         private int id;
         private string name;
-        private bool gluten;
         private string observations;
+        private bool gluten;
         private List<Product> products;
 
-        [PrimaryKey,AutoIncrement]
+        [PrimaryKey, AutoIncrement]
         public int Id { get { return id; } set { id = value; OnPropertyChanged(); } }
         public string Name { get { return name; } set { name = value; OnPropertyChanged(); } }
-        public bool Gluten { get { return gluten; } set { gluten = value; OnPropertyChanged(); } }
         public string Observations { get { return observations; } set { observations = value; OnPropertyChanged(); } }
+        public bool Gluten { get { return gluten; } set { gluten = value; OnPropertyChanged(); } }
         [ManyToMany(typeof(ProdIngre))]
         public List<Product> Products { get { return products; } set { products = value; OnPropertyChanged(); } }
     }

@@ -15,7 +15,7 @@ namespace iscaBar
         {
             InitializeComponent();
             DependencyService.Register<MockDataStore>();
-            MainPage = new NavigationPage(new ListIngredient());
+            MainPage = new NavigationPage(new ListOrdersView());
         }
 
         protected override void OnStart()
